@@ -1,6 +1,4 @@
-.idea
 source
-prepros.config
 node_modules
 *.json
 gulpfile.js
