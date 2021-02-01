@@ -6,11 +6,9 @@ user_icon.click(function (e) {
 });
 
 $(document).click(function (e) {
-		
 	if (!e.target.closest('.user-header')) {
 		user_menu.removeClass('active');
 	}
-	
 })
 //Adaptive: functions
 $(window).resize(function (event) {
