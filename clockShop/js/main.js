@@ -413,6 +413,7 @@ $(document).ready(function () {
 		}
 	});
 })();
+
 let sliders = document.querySelectorAll('._swiper');
 if (sliders) {
 	for (let index = 0; index < sliders.length; index++) {
@@ -455,7 +456,7 @@ let slider_about = new Swiper('.main-slider__body', {
 	//autoHeight: true,
 	//speed: 800,
 	loop: true,
-	
+
 	navigation: {
 		nextEl: '.control-main-slider__arrow_next',
 		prevEl: '.control-main-slider__arrow_prev',
@@ -465,7 +466,7 @@ let slider_about = new Swiper('.main-slider__body', {
 		320: {
 			slidesPerView: 1,
 			spaceBeetween: 0,
-			autoHeight:true,
+			autoHeight: true,
 		}
 	},
 
@@ -474,4 +475,42 @@ let slider_about = new Swiper('.main-slider__body', {
 	// 		ibg();
 	// 	},
 	// },
+});
+
+let slider2 = new Swiper('.slider-lots__body', {
+	observer: true,
+	observeParents: true,
+	slidesPerView: 3,
+	//slidesPerGroup: 3,
+	spaceBeetween: 0,
+	//autoHeight: true,
+	speed: 800,
+	loop: true,
+
+	navigation: {
+		nextEl: '.control-slider-lots__arrow_next',
+		prevEl: '.control-slider-lots__arrow_prev',
+	},
+
+	breakpoints: {
+		150: {
+			slidesPerView: 1,
+			//autoHeight: true,
+
+		},
+		550: {
+			slidesPerView: 2,
+			//autoHeight: true,
+		},
+		778: {
+			slidesPerView: 3,
+			//autoHeight: true,
+		}
+	},
+
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+	},
 });
